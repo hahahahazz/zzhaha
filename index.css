@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: wheat;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+nav section {
+    position: absolute;
+    display: flex;
+}
+
+nav section li {
+    display: flex;
+    text-align: center;
+    list-style: none;
+}
+
+.down, .lunch, .dinner {
+    display: none;
+}
+
+.drop1:hover .down {
+    display: block;
+}
+
+.drop2:hover .lunch {
+    display: block;
+}
+
+.drop3:hover .dinner {
+    display: block;
+}
+
+
+.down li a {
+    text-decoration: none;
+}
+
+.lunch li a {
+    text-decoration: none;
+}
+
+.dinner li a {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+}
+
+nav a {
+    padding: 10px;
+}
+
+nav a:hover {
+    color: #01a1dd;
+}
+
+
+
+.logo {
+    margin-left: 30px;
+}
+
+.logo img {
+    width: 60px;
+}
+
+
+
+/* 메인부분 시작*/
+main {
+    background-image: url(../images/블루보틀매장.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+h2 {
+    position: relative;
+    top: 250px;
+    left: 45px;
+    font-size: 1em;
+    color: aqua;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ment {
+    position: relative;
+    top: 295px;
+    left: 45px;
+    font-size: 2em;
+    color: lightskyblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    position: relative;
+    top: 300px;
+    left: 45px;
+    background-color: #01a1dd;
+    cursor: pointer;
+    padding: 5px 24px;
+    color: whitesmoke;
+    border: 0;
+    font-weight: 400;
+}
+
+footer {
+    color: gray;
+    font-size: 14px;
+}
+
+footer img {
+    width: 20px;
+}
