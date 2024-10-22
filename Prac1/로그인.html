@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 400px;
+            border: 1px solid black;
+            padding: 10px;
+
+            /*아래 박스사이징을 주면 박스크기가 커지지 않는다 */
+            /*box-sizing: border-box; */
+        }
+        .wrap > div{
+            border: 1px solid black;
+        }
+        .field{
+            display: flex;
+        }
+        .field label{
+            flex :1;
+        }
+        .field input{
+            flex: 4;
+        }
+
+        @media (max-width : 768px){
+        .field{
+            flex-direction: column;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+
+        <h2> ALCOHOLIC 로그인 </h2>
+        <div class="field">
+            <label> ID </label>
+            <input type="text">
+        </div>
+        <div class="field">
+            <label> PASSWORD </label>
+            <input type="text">
+        </div>
+        <div> <button> 로그인 </button></div>
+
+    </div>
+</body>
+</html>

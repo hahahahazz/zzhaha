@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/4ec79785b5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="head">
+        <div class="brand">에이콘커피</div>
+        <div class="gnb">
+          <div>메가 스토리</div>
+          <div>메뉴 소개</div>
+          <div>메가 소식</div>
+        </div>
+        <div class="SNS">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <div class="trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="hiddenGnb">
+        <ul>
+            <h2>ACORN COFFEE</h2>
+            <li>메가 스토리</li>
+            <li>메가 소개</li>
+            <li>메가 소식</li>
+        </ul>
+    </div>
+
+      <h1>ACORN MENU</h1>
+      <div class="aa">
+        <span>※메뉴 이미지는 연출컷이라 실물과 다를 수 있습니다.</span>
+      </div>
+
+      <div class="menu">
+        <div class="drink">
+          <img
+            src="https://img.79plus.co.kr/megahp/manager/upload/menu/20240904233223_1725460343117_hnbaJWlOTp.jpg"
+            alt=""
+          />
+          <h3>밤밤 찰떡 프라페</h3>
+          <p>
+            공주알밤이 들어가 부드럽고 달콤한 밤 맛과 쫀득하게 씹히는 찰떡의
+            식감이 매력적인 가을시즌 한정
+          </p>
+        </div>
+        <div class="drink">
+          <img
+            src="https://img.79plus.co.kr/megahp/manager/upload/menu/20240904233402_1725460442471_TnG_wedxcA.jpg"
+            alt=""
+          />
+          <h3>밤밤 크리미 슈페너</h3>
+          <p>
+            공주알밤이 들어가 부드럽고 달콤한 밤크림과 쌉싸름한 커피가 조화로운
+            가을시즌 한정 크림 슈페너
+          </p>
+        </div>
+        <div class="drink">
+          <img
+            src="https://img.79plus.co.kr/megahp/manager/upload/menu/20240904233650_1725460610305_KxPbvDZbNQ.jpg"
+            alt=""
+          />
+          <h3>귤 톡톡 젤리 스무디</h3>
+          <p>
+            톡톡 터지는 상큼한 귤의 과육과 몽글한 젤리식감이 매력적인 가을시즌
+            한정 귤 스무디
+          </p>
+        </div>
+        <div class="drink">
+          <img
+            src="https://img.79plus.co.kr/megahp/manager/upload/menu/20240904233849_1725460729242_inhKxiwKDm.jpg"
+            alt=""
+          />
+          <h3>귤 톡톡 릴렉싱 티플레저</h3>
+          <p>
+            톡톡 터지는 귤 과육이 들어간 몽글한 젤리에 릴렉싱에 좋은 캐모마일,
+            율피, 귤피를 우려낸 티를 넣어...
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // 햄버거 아이콘 클릭시
+      // active라는 클래스를 토글로 추가하거나 제거해줌
+
+      $(".trigger").click(function () {
+        $(this).toggleClass("active");
+        // console.log("active")	 
+		$('.hiddenGnb').toggleClass('on')
+        console.log("on")
+
+      });
+    </script>
+  </body>
+</html>

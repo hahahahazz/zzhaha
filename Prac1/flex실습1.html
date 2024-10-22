@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 910px;
+            background-color: rgba(128, 0, 0, 0.315);
+            display: flex;
+           /*위 display 설정하면 아래 두 코드가 기본설정
+            flex-direction: row; 
+           flex-wrap: nowrap; */
+           flex-wrap: wrap;
+        }
+        .item{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        @media (max-width : 768px){
+            .wrap{
+                flex-direction: column;
+            }
+            .item{
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+
+    </div>
+</body>
+</html>

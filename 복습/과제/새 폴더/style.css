@@ -1,0 +1,191 @@
+
+body{
+    margin: 0 200px;
+    padding: 0;
+}
+.head {
+height: 70px;
+border-bottom: 1px solid rgba(66, 60, 60, 0.507);
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+position: relative;
+}
+.gnb {
+width: 300px;
+display: flex;
+justify-content: space-between;
+}
+.SNS {
+width: 50px;
+height: 50px;
+
+font-size: 20px;
+line-height: 50px;
+}
+h1 {
+text-align: center;
+font-size: 50px;
+}
+.aa {
+font-size: 15px;
+text-align: center;
+color: rgba(139, 116, 136, 0.459);
+}
+.menu {
+display: flex;
+/* flex-wrap: wrap; */
+justify-content: space-between;
+gap: 20px; /* 메뉴 간 간격 */
+
+/* border: 1px solid black; */
+ 
+}
+.drink {
+
+/*border: 1px solid black;*/
+margin-top: 50px;
+ 
+
+padding: 5px;
+box-sizing: border-box;
+text-align: center;
+
+
+}
+
+.drink img {
+width: 80%;
+height: 300px;
+transition: 0.5s;
+object-fit: cover; /* 이미지 비율 유지하며 자르기 */
+}
+.drink:hover p{
+    display: block;
+}
+.drink img:hover {
+transform: scale(1.1);
+}
+
+/* 햄버거 생성 */
+
+.trigger {
+/* border: 1px solid #000; */
+width: 25px;
+height: 20px;
+
+/* header를 기준으로 오른쪽에 배치함*/
+position: absolute;
+top: 25px;
+right: 15px;
+/* border: 1px solid black; */
+}
+
+/* 햄버거 영역을 기준으로  3개을 span을 배치함 */
+.trigger span {
+background-color: black;
+height: 1px;
+position: absolute;
+width: 100%;
+transition: 0.3s;
+
+display: none;
+}
+
+.trigger span:nth-child(1) {
+top: 0;
+}
+.trigger span:nth-child(2) {
+top: 50%;
+}
+.trigger span:nth-child(3) {
+top: 100%;
+}
+
+/* 아이콘 클릭했을 떄 */
+.trigger.active span:nth-child(1) {
+transform: rotate(45deg);
+top: 50%;
+}
+.trigger.active span:nth-child(2) {
+opacity: 0;
+}
+.trigger.active span:nth-child(3) {
+transform: rotate(-45deg);
+top: 50%;
+}
+
+.hiddenGnb{
+height: 100%;
+position: absolute;
+z-index: 10;
+right: 0px;
+top: 71px;
+background-color:bisque;
+
+display: none;
+}
+
+ul{
+list-style: none;
+margin-right: 30px;
+margin-top: 50px;
+}
+li{
+margin-bottom: 30px;
+}
+ 
+  /* */
+@media (max-width: 768px) {
+    body{
+        margin: 0 ;
+        padding: 0;
+    }
+
+    .wrap{
+        width: 100%;
+    }
+    .brand{
+        margin-left: 10px;
+    }
+
+    .menu{
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+
+    .drink{
+        /* width: 100%; */
+        width: calc(50% - 20px); /* 한 줄에 2개 배치 */
+    }
+
+    .drink img {
+
+        width: 100%;
+        object-fit:contain;
+    }
+
+    .drink p{
+        width: 80%;
+        /* border:1px solid black; */
+        margin: auto;
+        display: none;
+    } 
+
+    .gnb{
+        display: none;
+    }
+    .hiddenGnb.on{
+        display: block;
+    }
+    .SNS i{
+        display: none;
+    }
+    .trigger span{
+        display: block;
+    }
+
+
+}

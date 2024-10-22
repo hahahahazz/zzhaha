@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: 300px;
+            height: 500px;
+            border: 1px solid black;
+            padding: 10px;
+            box-sizing: border-box;
+
+
+            display: flex;
+/*   display: flex; 를 쓰면 기본적으로 가로정렬              flex-direction: column;
+ 를 쓰면  display 쓰기전과 다를바ㅇ없이  세로정렬되지만 이제 조절이가능하다*/
+            flex-direction: column;
+            justify-content: space-between;
+            /*가로일때는 가로를 기준으로 벌어지고 지금은 세로가 기준이니 세로로 벌어진다.*/
+
+            align-items: center;
+            
+
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <p> title </p>
+        <p> 이미지 </p>
+        <div> content </div>
+    </div>
+</body>
+</html>

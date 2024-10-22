@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            flex-direction: row;    /*기본값 */
+        }
+        ul li{
+            border: 1px solid black;
+            flex: 1;
+
+        }
+        /*모바일 구간*/
+        @media(max-width : 768px){
+            ul{
+                flex-direction: column;
+            }
+
+            ul > li:nth-child(1){
+                order: 2;   /* order  기본값 0  모바일 크기로 줄이면 원하는순서대로 나오게 바꾸는코드
+                1번의 내용이  2번째로 간다는 의미!*/
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+
+    </ul>
+</body>
+</html>

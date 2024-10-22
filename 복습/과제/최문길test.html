@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            top: 0;
+            position: fixed;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            width: 100%;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .items{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 1px;
+        }
+
+        .item{
+            display: grid;
+            width: 250px;
+            padding: 10px;
+            margin: 15px;
+        }
+
+        .item img{
+            width: 100%;
+        }
+
+        .item img{
+            width: 320px;
+            height: 320px;
+            display: block; 
+            margin: 0 auto;
+            object-fit: scale-down;
+        }
+
+        .title{
+            flex: 1;
+        }
+
+        .nav-left{
+            flex: 4;
+        }
+
+        .nav-right{
+            flex: 0.8;
+        }
+
+        .hidden{
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            
+            .items{
+                width: 100%;
+            }
+
+            .item{
+                width: 100%;
+            }
+
+            .hidden{
+                display: block;
+            }
+
+            .nav-left, .nav-right{
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="title">
+        <h2>thisisneverthat</h2>
+    </div>
+        <div class="nav-left">
+        <nav>
+            <span>Shop</span>
+            <span>Features</span>
+            <span>Information</span>
+            <span>Stores</span>
+        </nav>
+    </div>
+    <div class="nav-right">
+        <nav>
+            <span>Search</span>
+            <span>Account</span>
+            <span>KRW</span>
+            <span>Bag[0]</span>
+        </nav>
+    </div>
+    <div class="hidden">
+        <button>MENU</button>
+    </div>
+
+    </header>
+
+    <div class="items">
+
+    <div class="item">
+    <img src="옷1.png" alt="">
+    <h4>PERTEX® T Down Jacket ₩259,000</h4>
+    </div>
+
+    <div class="item">
+    <img src="옷2.png" alt="">
+    <h4>PERTEX® Reversible T Down Jacket ₩259,000</h4>
+    </div>
+
+    <div class="item">
+    <img src="옷3.png" alt="">
+    <h4>DSN Down Puffer Jacket ₩239,000</h4>
+    </div>
+
+    <div class="item">
+    <img src="옷4.png" alt="">
+    <h4>Multi Pocket Down Jacket ₩279,000</h4>
+    </div>
+
+    <div class="item">
+    <img src="옷5.png" alt="">
+    <h4>Brushed Wool Check Jacket  ₩199,000</h4>
+    </div>
+
+    <div class="item">
+    <img src="옷6.png" alt="">
+    <h4>PERTEX® T Down Jacket ₩215,100</h4>
+    </div>
+
+    <div class="item">
+        <img src="옷1.png" alt="">
+        <h4>PERTEX® T Down Jacket ₩259,000</h4>
+        </div>
+    
+        <div class="item">
+        <img src="옷2.png" alt="">
+        <h4>PERTEX® Reversible T Down Jacket ₩259,000</h4>
+        </div>
+    
+        <div class="item">
+        <img src="옷3.png" alt="">
+        <h4>DSN Down Puffer Jacket ₩239,000</h4>
+        </div>
+    
+        <div class="item">
+        <img src="옷4.png" alt="">
+        <h4>Multi Pocket Down Jacket ₩279,000</h4>
+        </div>
+    
+        <div class="item">
+        <img src="옷5.png" alt="">
+        <h4>Brushed Wool Check Jacket  ₩199,000</h4>
+        </div>
+    
+        <div class="item">
+        <img src="옷6.png" alt="">
+        <h4>PERTEX® T Down Jacket ₩215,100</h4>
+        </div>
+
+        <div class="item">
+            <img src="옷1.png" alt="">
+            <h4>PERTEX® T Down Jacket ₩259,000</h4>
+            </div>
+        
+            <div class="item">
+            <img src="옷2.png" alt="">
+            <h4>PERTEX® Reversible T Down Jacket ₩259,000</h4>
+            </div>
+        
+            <div class="item">
+            <img src="옷3.png" alt="">
+            <h4>DSN Down Puffer Jacket ₩239,000</h4>
+            </div>
+        
+            <div class="item">
+            <img src="옷4.png" alt="">
+            <h4>Multi Pocket Down Jacket ₩279,000</h4>
+            </div>
+        
+            <div class="item">
+            <img src="옷5.png" alt="">
+            <h4>Brushed Wool Check Jacket  ₩199,000</h4>
+            </div>
+        
+            <div class="item">
+            <img src="옷6.png" alt="">
+            <h4>PERTEX® T Down Jacket ₩215,100</h4>
+            </div>
+    
+            </div>
+</body>
+
+<footer>
+
+</footer>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .hi{
+            border: 1px solid black;
+            /* span 은 인라인 태그라서 크기를 가질수 없다. 아래코드 적용안됨.
+            width: 100px;
+            height: 100px;
+            */
+            padding: 10px;
+            background-color: cadetblue;
+        }
+
+        input{
+            width: 100px;
+            height: 60px;
+
+        }
+
+        .title{
+            display: block;
+            /* 스팬은 인라인 태그이지만 위의 블록 설정을 해주면 인라인블럭태그 되어 
+            너비나 높이를 줄수 있다. */
+            width: 100px;
+            height: 100px;
+            background-color: burlywood;
+            text-align: center;
+        }
+        .price{
+            display: block;
+        }
+        .category{
+
+        }
+
+    </style>
+</head>
+<body>
+    <h2> 태그 분류 </h2>
+    <div> 블럭태그 </div>
+    <span> 인라인 태그 </span>
+    <br>
+    <input type="text" value="인라인 블럭태그"> --input 
+    <h4> 블럭 태그  : 너비, 높이 줄 수 있다. 한 줄 차지 한다. </h4>
+    <h3> div </h3>
+    <h4> 인라인 블럭태그 : 한 줄에 여러 개 들어감. 너비와 높이를 줄 수 있다. </h4>
+    <h4> 인라인 : 한 줄에 여러개 들어간다. 너비나 높이를 줄 수 없다. padding 은 가능 </h4>
+    <h3> span </h3>
+    <span class="hi"> hello span </span>
+
+    <input type="text">    <input type="text">    <input type="text">
+
+
+    <span class="title">알사탕</span>
+    <span class="price">14000</span>
+    <span class="category">소설</span>
+</body>
+</html>

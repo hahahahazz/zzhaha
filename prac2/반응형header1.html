@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            border: 1px solid black;
+            height: 60px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inner{
+            width: 1280px;
+            border: 1px solid tomato;
+            height: 20px;
+
+            /*나란히 정렬*/
+            display: flex;
+            justify-content: space-between;
+
+            /*부모지정*/
+            position: relative;
+        }
+
+
+        .inner > div{
+            border: 1px solid skyblue;
+        }
+
+        /*햄버거 아이콘*/
+        .trigger{
+            position: absolute;
+            right: 10px;
+            top: 0px;
+
+            display: none;
+        }
+        /*모바일 구간*/
+        /* 1. 높이 60px - > auto
+        2. inner 영역의 flex-direction  세로로 변경
+        3.inner크기도 100%   
+        4.햄버거 아이콘 보이게 하기  
+        */
+        @media(max-width : 768px){
+
+            header{
+                height: auto ;
+            }
+            .inner{
+                width: 100%;
+                flex-direction: column;
+
+
+
+            }
+            .trigger{
+                display: block;
+            }
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="inner">
+            <div class="logo">로고</div>
+            <div class="gnb">메뉴</div>
+            <div class="sns">아이콘sns</div>
+            <div class="trigger">햄버거버튼</div>
+        </div>
+
+
+    </header>
+
+
+</body>
+</html>

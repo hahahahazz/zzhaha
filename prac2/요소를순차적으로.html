@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap > div{
+            opacity: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div>김도현</div>
+    <div class="item">김무궁</div>
+    <div>김세중</div>
+    <div>김솔</div>
+    <div>김정석</div>
+    <div>김세현</div>
+</div>
+
+<script>
+    // let item = document.querySelector(".item");
+    // item.style.opacity = 1;
+    //setTimerout(콜백함수, 초):
+    setTimeout( function(){
+    let item = document.querySelector(".item");
+    item.style.opacity = 1;
+    }  , 1000);  /*1000 = 1초*/
+
+</script>
+</body>
+</html>

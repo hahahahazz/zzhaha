@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블로그</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Nanum Gothic", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        body{
+            background-color: rgb(233, 233, 233);
+        }
+        .main{
+            width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+        }
+        header{
+            width: 80%;
+            margin: 0 auto;
+            height: 200px;
+        }
+        .blog-logo{
+            width: 50px;
+            display: none;
+        }
+        .header-icon{
+            display: none;
+        }
+        .header-icon a{
+            font-size: 25px;
+            color: black;
+            padding: 0 5px;
+        }
+        .blog-title{
+            font-size: 30px;
+            line-height: 200px;
+        }
+        .blog-title a{
+            display: flex;
+            width: 100%;
+            text-decoration: none;
+            color: black;
+        }
+        .title-icon{
+            display: none;
+        }
+        .menu{
+            display: flex;
+        }
+        section{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .post-wrap{
+            margin-bottom: 50px;
+        }
+        .title-wrap{
+            padding-top: 50px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .post-list{
+            margin-bottom: 20px;
+        }
+        .post-list a{
+            text-decoration: none;
+            color: rgb(168, 168, 168);
+        }
+        .post-title{
+            font-size: 35px;
+            margin-bottom: 30px;
+        }
+        .profile{
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .profile-img img{
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .profile-text{
+            display: flex;
+        }
+        .nickname{
+            text-decoration: none;
+            color: black;
+            margin-left: 10px;
+        }
+        .date{
+            color: rgb(168, 168, 168);
+            margin-left: 10px;
+        }
+        .post-function{
+            position: absolute;
+            right: 0;
+            bottom: 25px;
+            display: flex;
+            align-items: center;
+        }
+        .copy-btn{
+            text-decoration: none;
+            color: rgb(168, 168, 168);
+        }
+        .copy-btn:hover{
+            text-decoration: underline;
+        }
+        .buddy-btn{
+            border: 1px solid black;
+            display: inline-block;
+            padding: 5px;
+            text-decoration: none;
+            color: black;
+            margin-left: 10px;
+        }
+        .overflow-wrap{
+            margin-left: 5px;
+        }
+        .overflow-btn{
+            padding: 10px;
+            color: rgb(168, 168, 168);
+        }
+        .overflow-menu{
+            display: none;
+        }
+        .title-wrap hr{
+            background-color: rgb(168, 168, 168);
+            height: 1px;
+            border: 0;
+        }
+        .content{
+            text-align: center;
+        }
+        .content div{
+            margin-bottom: 10px;
+        }
+        .content img{
+            width: 100%;
+        }
+        .tag-list{
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .tag-list a{
+            text-decoration: none;
+            color: black;
+            display: inline-block;
+            background-color: rgb(235, 235, 235);
+            padding: 5px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        .tag-list a:hover{
+            background-color: lightgray;
+        }
+        .post-btn{
+            display: flex;
+            padding-bottom: 20px;
+            font-size: 14px;
+        }
+        .sympathy-btn, .comment-btn{
+            text-decoration: none;
+            display: inline-block;
+            color: black;
+            border: 1px solid rgb(168, 168, 168);;
+            padding: 5px;
+            padding-left: 10px;
+        }
+        .icon{
+            margin-right: 5px;
+        }
+        .count{
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .arrow{
+            margin-left: 5px;
+        }
+        .comment-btn{
+            margin-left: 10px;
+        }
+        footer{
+            width: 80%;
+            height: 100px;
+            margin: 0 auto;
+        }
+
+        /* 헤더를 모바일 버전으로 변경 */
+        @media(max-width: 768px){
+            body{
+                background-color: white;
+            }
+            /* main 영역의 width가 화면 전체에 들어오게 변경 */
+            /* 화면 크기 변화에 따라 비율 변화 */
+            .main{
+                width: 100%;
+            }
+            header{
+                width: 100%;
+                height: 50px;
+            }
+            .header-wrap{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            /* 로고와 아이콘이 보이게 함 */
+            .blog-logo, .header-icon{
+                display: block;
+            }
+            .blog-logo{
+                margin-left: 10px;
+            }
+            .blog-title{
+                font-size: 20px;
+                line-height: 50px;
+            }
+            .title-icon{
+                display: block;
+                margin-right: 5px;
+            }
+            /* 프로필 영역 변경 */
+            .profile-text{
+                flex-direction: column;
+            }
+            .date{
+                font-size: 13px;
+            }
+            .copy-btn{
+                display: none;
+            }
+            .buddy-btn{
+                border: 1px solid rgb(30, 209, 30);
+                color: rgb(30, 209, 30);
+                font-size: 14px;
+            }
+            footer{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- main의 width는 body의 80% -->
+    <div class="main">
+        <!-- 블로그 헤더 영역 -->
+        <header>
+            <div class="header-wrap">
+                <!-- 블로그 로고는 모바일 화면에서만 출력 -->
+                <div class="blog-logo">
+                    <a href=""><img src="https://iconape.com/wp-content/files/kx/383735/svg/383735.svg" alt=""></a>
+                </div>
+                <div class="blog-title"><a href=""><span class="title-icon"><i class="fa-regular fa-rectangle-list"></i></span>블로그</a></div>
+                <!-- 아이콘은 모바일 화면에서만 출력 -->
+                <div class="header-icon">
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href=""><i class="fa-solid fa-bars"></i></a>
+                </div>
+            </div>
+            <hr>
+        </header>
+
+        <section>
+            <!-- 게시글 영역 -->
+            <div class="post-wrap">
+                <!-- 게시글 제목 부분 -->
+                <div class="title-wrap">
+                    <div class="post-list"><a href="">게시판</a></div>
+                    <div class="post-title">제목</div>
+                    <!-- 작성자 프로필 -->
+                    <div class="profile">
+                        <a href="" class="profile-img"><img src="https://i.namu.wiki/i/w11dbZZeomJI4bD3_KItw3vq7tgglcM1YQA_xHULxMsixPpY1S7KcB8WrEFhJNuSuejiiQkicGKMH12JvpUqBQ.webp" alt=""></a>
+                        <div class="profile-text">
+                            <a href="" class="nickname">닉네임</a>
+                            <span class="date">2024. 9. 21. 8:24</span>
+                        </div>
+                    </div>
+                    <div class="post-function">
+                        <a href="" class="copy-btn">URL 복사</a>
+                        <a href="" class="buddy-btn">+ 이웃추가</a>
+                        <div class="overflow-wrap">
+                            <a href="" class="overflow-btn">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </a>
+                            <div class="overflow-menu"></div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <!-- 게시글 내용 -->
+                <div class="content">
+                    <div>내용11</div>
+                    <div>내용22</div>
+                    <div><img src="https://cdn.telltrip.com/news/photo/202406/1799_9874_2953.jpg" alt=""></div>
+                    <div>끝</div>
+                    <div><img src="https://vj-prod-website-cms.s3.ap-southeast-1.amazonaws.com/z1-1715916545766.jpg" alt=""></div>
+                    <div><img src="https://vj-prod-website-cms.s3.ap-southeast-1.amazonaws.com/z1-1715916545766.jpg" alt=""></div>
+                    <div><img src="https://vj-prod-website-cms.s3.ap-southeast-1.amazonaws.com/z1-1715916545766.jpg" alt=""></div>
+                    <div><img src="https://vj-prod-website-cms.s3.ap-southeast-1.amazonaws.com/z1-1715916545766.jpg" alt=""></div>
+                    <div>좋습니다</div>
+                </div>
+            </div>
+            <!-- 태그 목록 -->
+            <div class="tag-list">
+                <a href="">#여행</a>
+                <a href="">#여행</a>
+                <a href="">#여행</a>
+                <a href="">#여행</a>
+                <a href="">#여행</a>
+                <a href="">#여행</a>
+                <a href="">#태그태그태그태그</a>
+                <a href="">#태그태그태그태그</a>
+                <a href="">#태그태그태그태그</a>
+                <a href="">#태그태그태그태그</a>
+                <a href="">#태그태그태그태그</a>
+                <a href="">#태그태그태그태그</a>
+                <a href="">#태그태그태그태그</a>
+            </div>
+            <!-- 공감, 댓글 버튼 -->
+            <div class="post-btn">
+                <a href="" class="sympathy-btn"><span class="icon"><i class="fa-regular fa-heart"></i></span>공감<span class="count">85</span>|<span class="arrow"><i class="fa-solid fa-chevron-down"></i></span></a>
+                <a href="" class="comment-btn"><span class="icon"><i class="fa-regular fa-comment-dots"></i></span>댓글<span class="count">23</span>|<span class="arrow"><i class="fa-solid fa-chevron-down"></i></span></a>
+            </div>
+            <!-- <div class="comment"></div> -->
+        </section>
+
+        <!-- 블로그 푸터 영역 -->
+        <footer>
+            <hr>
+        </footer>
+    </div>
+
+    <script>
+        // 공감, 댓글 버튼 클릭 시 아이콘 방향 변경
+
+        let commentBtn = document.querySelector(".comment-btn");
+        let commentArrowIcon = commentBtn.querySelector(".arrow i");
+        commentBtn.addEventListener("click", function(e){
+            e.preventDefault();
+            // 아이콘 클래스 토글
+            if (commentArrowIcon.classList.contains("fa-chevron-down")) {
+                commentArrowIcon.classList.remove("fa-chevron-down");
+                commentArrowIcon.classList.add("fa-chevron-up"); // 아이콘을 위쪽 화살표로 변경
+            } else {
+                commentArrowIcon.classList.remove("fa-chevron-up");
+                commentArrowIcon.classList.add("fa-chevron-down"); // 아이콘을 아래쪽 화살표로 변경
+            }
+        });
+
+        let sympathyBtn = document.querySelector(".sympathy-btn");
+        let sympathyArrowIcon = sympathyBtn.querySelector(".arrow i");
+
+        sympathyBtn.addEventListener("click", function(e) {
+            e.preventDefault(); // 기본 동작 방지
+
+            // 아이콘 클래스 토글
+            if (sympathyArrowIcon.classList.contains("fa-chevron-down")) {
+                sympathyArrowIcon.classList.remove("fa-chevron-down");
+                sympathyArrowIcon.classList.add("fa-chevron-up"); // 아이콘을 위쪽 화살표로 변경
+            } else {
+                sympathyArrowIcon.classList.remove("fa-chevron-up");
+                sympathyArrowIcon.classList.add("fa-chevron-down"); // 아이콘을 아래쪽 화살표로 변경
+            }
+        });
+    </script>
+</body>
+</html>
