@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onclick="alert(`버블링은 여기까지 도달하지 못합니다.`)">
+    <button onclick="event.stopPropagation()">클릭해 주세요.</button>
+    stopPropagation=  나한테 이벤트 왔찌? 그걸로 끝내. 부모의 이벤트를발생시키지마
+    버튼누르면 원래 버블링 발생. 부모의 이벤트가 발생해야하지만
+    위의 속성을 주었기때문에 부모를 클릭해야 부모의 이벤트가 발생하게끔하는기능. 
+  </body>
+</html>

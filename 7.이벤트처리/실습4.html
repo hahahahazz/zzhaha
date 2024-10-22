@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 200px;
+            height: 200px;
+            background-color: darkslategray;
+        }
+    </style>
+    <script>
+        /*함수의 위치. 위쪽에두면 위에서 아래로 내려오며 실행되는데
+        이부분은 그냥 해석만되지 아래에서 호출해야 실행되기때문에 위에 둘수있다*/
+        function a(){
+            alert("클릭");
+            event.stopPropagation();
+
+        }
+        function a2(e){/*여기서 e 는 아래 event 의 약자로 e 로 작성할수 있다.*/
+            alert("클릭2");
+            e.stopPropagation();
+
+        }
+        function b(){
+            alert("부모 클릭");
+            
+        }
+    </script>
+</head>
+<body>
+    <div class="wrap" onclick="b()">
+        <button onclick="a()">버튼</button>
+        <button onclick="a2(event)">버튼</button>
+    </div>
+</body>
+</html>

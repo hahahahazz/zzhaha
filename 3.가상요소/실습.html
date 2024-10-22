@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            width: 100px;
+            background-color: aquamarine;
+
+            position: relative;
+        }
+        .underline{
+            height: 1px;
+            background-color: red;
+            width: 0px;
+            transition: 0.5s;
+
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+        .item:hover .underline{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h2>가상요소 실습하기</h2>
+    <h3>가상이 아닌 실제 요소 입력하여 밑줄 나오기</h3>
+<div class="item"> 메뉴
+
+    <div class="underline"></div>
+
+
+</div>
+
+
+</body>
+</html>

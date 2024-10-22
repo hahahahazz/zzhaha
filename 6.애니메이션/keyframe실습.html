@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+            animation: changeColor 3s infinite;
+                    /*아래 키프레임 에 정해준 이름을 적어주고, 속도와, 무한히.*/
+        }
+
+        @keyframes changeColor{
+            0%{
+                background-color: blanchedalmond;
+            }
+            100%{
+                background-color: rgb(241, 167, 225);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>keyframe 을 이용해서 애니메이션 만들기</h2>
+    <div class="box">
+
+    </div>
+</body>
+</html>

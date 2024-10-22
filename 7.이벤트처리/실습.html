@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+
+    </style>
+</head>
+<body>
+    <button id="btn"> 클릭버튼 </button>
+
+    <script>
+        let btn = document.querySelector("#btn");
+       // alert(btn);
+    /* 
+       //이제 이버튼에 어떤 이벤트를 추가할거야.
+       //이벤트 이름, 함수(콜백함수)   -익명함수랑 이름있는 함수가 와도된다.
+       btn.addEventListener("click", function(){
+        alert("클릭했니")
+       });
+   
+       //화살표 함수 =>            위 함수를 이렇게 표현할 수 있다. 간편하다. 근데 내용많음 또 쓰기힘들다
+        btn.addEventListener("click", () => alert("나 클릭"));
+
+        // 함수 를 전달받아 클릭햇을 때 아래 function 코드를 실행해줘 . 
+        btn.addEventListener("click", a);
+        function a(){
+            alert("클릭ㅋ");
+        }
+ */
+        //
+        btn.addEventListener("click", function(){
+            alert("또 클릭");
+        });
+
+
+</script>
+
+
+
+
+</body>
+</html>

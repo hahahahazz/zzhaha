@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            width: 300px;
+            background-color: cadetblue;
+
+            position: relative;
+        }
+        /* 요소 뒤쪽에 가상으로 넣겠다*/
+        .item::after{
+            content: "┬┴┬┴┤( ㅁ😛 😛)├┬┴┬┴";   
+            /*content 이 내용요소 가 반드시 있어야한다. 내용이 없는경우엔 "" 로 라도 입력해야함*/
+            /* 위 내용이 div 아래로 배치된것은 흘러넘친거다! 만약 아래 흘러넘친걸 안보게하려면 아래코드!*/
+            /*overflow: hidden;*/
+            display: inline-block;
+
+
+            /*코드 작성 순서와 관계없이, 
+           배경 스타일의 적용: 가상 요소는 width, height, background-color 등으로 지정된 스타일을 통해 먼저 기본적인 형태가 설정됩니다. 
+            이 스타일은 화면에 요소가 렌더링되기 전에 적용되므로, 시각적으로 먼저 나타나는 것처럼 보입니다. 
+           content 속성은 이 내용은 가상 요소가 생성된 후에 렌더링되기 때문에,
+            배경 스타일이 먼저 설정된 상태에서 그 위에 텍스트가 덧붙여지는 형태가 됩니다.
+            렌더링(rendering)이란, 웹 페이지의 HTML, CSS, JavaScript 등의 코드가 사용자의 화면에 실제로 표시되는 과정을 의미합니다.
+            결과적으로 가상요소의 배경이 먼저 보이고, 그다음에 텍스트가 그위에 위치하므로 가로선이 먼저나타나는거처럼 보인다.
+            즉, 코드 작성 순서와 관계없이 CSS의 렌더링 과정에서 배경 스타일이 우선적으로 적용되고, 그 위에 텍스트가 추가되는 방식으로 인해 그렇게 보이는 것입니다.
+          
+             그래서 가로선이 먼저 보이고 그 아래에 텍스트가 나오는 것처럼 느껴지는 것이죠.*ㄴ
+
+/*원초적인 가상 요소의 설정은 기본적으로 position: static; 상태입니다. 즉, 가상 요소에 아무런 특별한 위치 설정이 없다면
+부모 요소의 콘텐츠 안에 위치: 가상 요소의 내용은 부모 요소의 콘텐츠와 함께 표시되며, 부모 요소의 내부에 위치하게 됩니다. 
+즉, 부모 요소의 내용 다음에 추가되어, 부모의 일부처럼 보이게 됩니다.
+크기와 흐름: 가상 요소의 크기와 위치는 부모 요소의 콘텐츠 흐름에 따라 결정되며, 따라서 부모 요소의 크기를 초과하지 않는 한 흘러넘치는 효과는 발생하지 않습니다.*/
+
+            width: 20px;            
+            height: 2px;
+            background-color: red;
+
+            /*부모를 기준으로 왼쪽에서 0 바닥에서0 의 위치에 배치하겠다*/
+            
+            bottom: 0px;
+            left: 0px;
+            transition: 0.5s;
+        }
+        .item:hover:after{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>가상요소 사용하기</h2>
+    <h3>가상요소를 사용하여 밑줄 나오게하기</h3>
+
+    <div class="item">메뉴    </div>
+
+
+</body>
+</html>

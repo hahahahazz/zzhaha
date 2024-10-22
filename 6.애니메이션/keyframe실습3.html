@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+
+            position: relative;
+            animation: upSize 2.5s infinite;
+                    /*아래 키프레임 에 정해준 이름을 적어주고, 속도와, 무한히.*/
+        }
+
+        @keyframes upSize{
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.5);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>keyframe 을 이용해서 애니메이션 만들기3</h2>
+    <div class="box">
+
+    </div>
+</body>
+</html>
